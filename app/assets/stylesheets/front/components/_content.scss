@@ -1,0 +1,91 @@
+/**
+ * COMPONENT
+ * Name: Content
+ ********************************* */
+
+.c-content {
+
+  h2 {
+    @include rem(margin-bottom, 30px);
+    font-family: $font-secondary;
+    @include rem(letter-spacing, 1px);
+
+    &:not(:first-child) {
+      @include rem(margin-top, 30px);
+    }
+
+    @include mq($until: small) {
+      @include font-size(20px, 28px);
+    }
+
+    @include mq($from: small, $until: medium) {
+      @include font-size(24px, 32px);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include font-size(32px, 40px);
+    }
+
+    @include mq($from: large) {
+      @include font-size(40px, 52px);
+    }
+  }
+
+  p {
+
+    &:not(:first-child) {
+      @include rem(margin-top, 15px);
+    }
+
+    @include mq($until: small) {
+      @include font-size(14px, 20px);
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    .l-overlay__content & {
+      width: 100%;
+      object-fit: cover;
+
+      @include mq($until: small) {
+        @include rem(height, 180px);
+      }
+
+      @include mq($from: small) {
+        @include rem(height, 220px);
+      }
+    }
+  }
+
+  a {
+    color: $color-background;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.c-content__link {
+      display: inline-block;
+      @include rem(padding-top, 15px);
+      @include rem(padding-bottom, 15px);
+      @include font-size(11px, 15px);
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      @include rem(letter-spacing, 1px);
+
+      &:before {
+        content: "— ";
+        display: inline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

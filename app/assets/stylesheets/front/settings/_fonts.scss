@@ -1,0 +1,16 @@
+// Fonts
+$font-serif: "Playfair Display", Georgia, Times, "Times New Roman", serif;
+$font-sans-serif: "Montserrat", "Helvetica Neue", Arial, sans-serif;;
+$font-default: $font-sans-serif;
+$font-primary: $font-default;
+$font-secondary: $font-serif;
+$font-code: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+
+// Font-size + line-height
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Font-weight
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;

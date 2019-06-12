@@ -1,0 +1,11 @@
+// Breakpoints
+$mq-breakpoints: (
+  "small": 480px,
+  "medium": 720px,
+  "large": 960px,
+  "xlarge": 1280px
+);
+
+// Rem
+$rem-fallback: true;
+$rem-baseline: 10px;

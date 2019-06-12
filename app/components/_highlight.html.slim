@@ -1,0 +1,8 @@
+.l-highlight(id="uxlab")
+  .l-highlight__container(style="background-image: url('#{picture}');")
+    .l-container.l-container--small
+
+      .l-highlight__content
+        p.l-highlight__text= text
+        .l-highlight__more
+          = link_to button[:label], button[:href], :target => "_blank", :class => "l-highlight__button c-button"

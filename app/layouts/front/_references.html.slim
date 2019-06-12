@@ -1,0 +1,22 @@
+.l-references(id="references")
+  .l-references__container
+    .l-container.l-container--large
+
+      .l-references__head
+        h2.l-references__title.c-title Nos références
+
+      .l-references__content
+        .l-references__items
+
+          - dato.book.references.each do |reference|
+            .l-references__item
+              = ui_component('reference',
+                id: reference.id,
+                title: reference.name,
+                description: reference.description,
+                picture: { \
+                  src: reference.picture.url,
+                  alt: reference.picture.alt,
+                },
+                url: reference.url ? reference.url : false,
+              )

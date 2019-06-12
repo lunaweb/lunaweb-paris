@@ -1,0 +1,41 @@
+/**
+ * COMPONENT
+ * Name: Button
+ ********************************* */
+
+.c-button {
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  @include rem(min-width, 60px);
+  @include font-size(11px, 25px);
+  font-weight: $font-bold;
+  @include rem(letter-spacing, 1px);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-foreground;
+  background-color: $color-background;
+  @include rem(border, 2px solid $color-background);
+  @include rem(border-radius, 100px);
+  @include rem(box-shadow, 0 10px 20px rgba($color-foreground, 0.2));
+  transition: box-shadow 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    border-color: $color-background;
+    @include rem(box-shadow, 0 15px 25px rgba($color-foreground, 0.1));
+    transform: translate3d(0, -2px, 0);
+    outline: none;
+  }
+
+  @include mq($until: small) {
+    @include rem(padding, 15px 25px 17px 25px);
+  }
+
+  @include mq($from: small) {
+    @include rem(padding, 15px 45px 17px 45px);
+  }
+}

@@ -1,0 +1,27 @@
+// SETTINGS
+@import "front/settings/colors";
+@import "front/settings/fonts";
+@import "front/settings/layout";
+@import "front/settings/core";
+
+// HELPERS
+// Functions and mixins
+@import "front/helpers/colors";
+@import "front/helpers/fonts";
+@import "front/helpers/layout";
+@import "front/helpers/text";
+
+// NPM/BOWER/SPROCKETS
+// Libraries imported from node_module, bower_components and some gems, with link to the documentation
+@import "sass-mq/mq";                 // https://github.com/sass-mq/sass-mq
+@import "sass-rem/rem";               // https://github.com/pierreburel/sass-rem
+@import "sass-em/em";                 // https://github.com/pierreburel/sass-em
+
+// VENDORS
+// No package managed librairies (reset, plugins…)
+@import "vendors/reset";
+
+// BASE
+// Global scope styles
+@import "front/base/fonts";
+@import "front/base/core";

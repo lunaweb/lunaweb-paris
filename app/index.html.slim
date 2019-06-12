@@ -1,0 +1,19 @@
+= ui_component('introduction',
+  title: dato.introduction.baseline,
+)
+
+= render :partial => "layouts/front/offers"
+
+- if dato.uxlab.is_displayed
+  = ui_component('highlight',
+    text: dato.uxlab.description,
+    picture: dato.uxlab.picture.url,
+    button: { \
+      label: dato.uxlab.button_label,
+      href: dato.uxlab.button_url,
+    },
+  )
+
+= render :partial => "layouts/front/references"
+
+= render :partial => "layouts/front/contact"

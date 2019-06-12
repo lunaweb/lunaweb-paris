@@ -1,0 +1,10 @@
+@mixin hide-text($direction: left) {
+  overflow: hidden;
+  @if $direction == left {
+    text-align: left;
+    text-indent: -999px;
+  } @else {
+    text-indent: 110%;
+    white-space: nowrap;
+  }
+}

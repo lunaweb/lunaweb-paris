@@ -1,0 +1,130 @@
+.u-hidden {
+  display: none !important;
+}
+
+.u-visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  visibility: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+@include mq($until: small) {
+  .u-hidden\@until-small {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@until-small {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+@include mq($from: small) {
+  .u-hidden\@small {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@small {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+@include mq($until: medium) {
+  .u-hidden\@until-medium {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@until-medium {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+@include mq($from: medium) {
+  .u-hidden\@medium {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@medium {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+@include mq($until: large) {
+  .u-hidden\@until-large {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@until-large {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+@include mq($from: large) {
+  .u-hidden\@large {
+    display: none !important;
+  }
+
+  .u-visually-hidden\@large {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+}

@@ -1,0 +1,39 @@
+/**
+ * COMPONENT
+ * Name: Next
+ ********************************* */
+
+.c-next {
+  position: relative;
+  display: inline-block;
+  color: $color-foreground;
+  cursor: pointer;
+  z-index: 9;
+}
+
+  .c-next__label {
+
+    @include mq($until: small) {
+      display: none;
+    }
+
+    @include mq($from: small) {
+      @include font-size(11px, 15px);
+      font-weight: $font-bold;
+      text-align: center;
+      text-transform: uppercase;
+      @include rem(letter-spacing, 1px);
+    }
+  }
+
+  .c-next__icon {
+    display: block;
+    @include rem(width, 52px);
+    @include rem(height, 52px);
+    margin-right: auto;
+    margin-left: auto;
+    @include rem(padding, 15px);
+    font-family: "Arial", sans-serif;
+    @include font-size(20px, 22px);
+    text-align: center;
+  }

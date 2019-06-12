@@ -1,0 +1,25 @@
+.c-introduction.js-pointer-referent
+  .c-introduction__container
+
+    .c-introduction__content.c-introduction__content--frontface
+      .c-introduction__title= title
+
+    .c-introduction__content.c-introduction__content--backface
+      .c-introduction__title= title
+
+    .c-introduction__footer
+      = link_to "#offers", :class => "c-next js-next js-scrollto" do
+        .c-next__label Découvrir nos prestations
+        .c-next__icon ↓
+
+    .c-introduction__background.js-blinker
+      = image_tag "front/introduction/1.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/2.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/3.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/4.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/5.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/6.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/7.jpg", :class => "c-introduction__picture"
+      = image_tag "front/introduction/8.jpg", :class => "c-introduction__picture"
+
+  .c-introduction__pointer.js-pointer

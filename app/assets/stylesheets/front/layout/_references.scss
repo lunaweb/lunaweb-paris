@@ -1,0 +1,117 @@
+/**
+ * LAYOUT
+ * Name: References
+ ********************************* */
+
+.l-references {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-references__container {
+
+    @include mq($until: medium) {
+      @include rem(padding-top, 40px);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(padding-top, 60px);
+    }
+
+    @include mq($from: large) {
+      @include rem(margin-left, 60px);
+    }
+
+    @include mq($from: large, $until: xlarge) {
+      @include rem(padding-top, 60px);
+      @include rem(margin-right, 60px);
+    }
+
+    @include mq($from: xlarge) {
+      @include rem(padding-top, 120px);
+      @include rem(margin-right, 120px);
+    }
+  }
+
+
+    /**
+     * HEAD
+     *********************** */
+    .l-references__head {}
+
+      .l-references__title {}
+
+
+    /**
+     * CONTENT
+     *********************** */
+    .l-references__content {
+      
+      &:not(:first-child) {
+
+        @include mq($until: large) {
+          @include rem(margin-top, 40px);
+        }
+
+        @include mq($from: large) {
+          @include rem(margin-top, 60px);
+        }
+      }
+    }
+
+      .l-references__items {
+
+        @include mq($from: medium) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include rem(margin-top, -15px);
+          @include rem(margin-right, -15px);
+          @include rem(margin-left, -15px);
+        }
+
+        @include mq($from: large) {
+          @include rem(margin-top, -30px);
+          @include rem(margin-right, -30px);
+          @include rem(margin-left, -30px);
+        }
+      }
+
+        .l-references__item {
+
+          @include mq($until: medium) {
+            @include rem(max-width, 480px);
+            margin-right: auto;
+            margin-left: auto;
+
+            &:not(:first-child) {
+              @include rem(margin-top, 30px);
+            }
+          }
+
+          @include mq($from: medium, $until: xlarge) {
+            width: 50%;
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include rem(max-width, 380px);
+            @include rem(padding, 15px);
+          }
+
+          @include mq($from: large) {
+            @include rem(max-width, 450px);
+            @include rem(padding, 30px);
+          }
+
+          @include mq($from: xlarge) {
+            width: 33.333%;
+          }
+        }

@@ -1,0 +1,13 @@
+- classes = ""
+
+- if large == true
+  - classes = "c-offer--large"
+
+.c-offer(class=classes)
+  .c-offer__link
+    .c-offer__container
+      .c-offer__content
+        h2.c-offer__title= title
+        p.c-offer__description= description
+      .c-offer__illustration
+        = image_tag picture[:src], :alt => picture[:alt], :class => "c-offer__picture"

@@ -1,0 +1,21 @@
+// Colors
+$color-blue: #2e55ff;
+$color-red: #e64040;
+$color-yellow: #fffac1;
+$color-grey: #f6f6f6;
+
+$color-background: #fff;
+$color-foreground: #010101;
+
+$color-primary: $color-blue;
+
+$color-success: green;
+$color-error: red;
+
+// Utilities Colors
+$colors: (
+  "blue": $color-blue,
+  "red": $color-red,
+  "yellow": $color-yellow,
+  "grey": $color-grey,
+);

@@ -1,0 +1,117 @@
+/**
+ * LAYOUT
+ * Name: Highlight
+ ********************************* */
+
+.l-highlight {
+  position: relative;
+
+  @include mq($from: medium, $until: large) {
+    @include rem(padding-top, 40px);
+    @include rem(margin-right, 40px);
+    @include rem(margin-left, 40px);
+  }
+
+  @include mq($from: large) {
+    @include rem(padding-top, 60px);
+    @include rem(margin-left, 60px);
+  }
+
+  @include mq($from: large, $until: xlarge) {
+    @include rem(margin-right, 60px);
+  }
+
+  @include mq($from: xlarge) {
+    @include rem(margin-right, 120px);
+  }
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-highlight__container {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-red;
+      mix-blend-mode: hard-light;
+      z-index: 1;
+    }
+
+    @include mq($until: small) {
+      @include rem(padding-top, 60px);
+      @include rem(padding-bottom, 60px);
+    }
+
+    @include mq($from: small, $until: medium) {
+      @include rem(padding-top, 80px);
+      @include rem(padding-bottom, 80px);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(padding-top, 120px);
+      @include rem(padding-bottom, 120px);
+    }
+
+    @include mq($from: large) {
+      @include rem(padding-top, 180px);
+      @include rem(padding-bottom, 180px);
+    }
+  }
+
+
+    /**
+     * CONTENT
+     *********************** */
+    .l-highlight__content {
+      position: relative;
+      text-align: center;
+      color: $color-background;
+      z-index: 2;
+    }
+
+      .l-highlight__text {
+        font-family: $font-secondary;
+
+        @include mq($until: small) {
+          @include font-size(26px, 36px);
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include font-size(32px, 46px);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include font-size(36px, 50px);
+        }
+
+        @include mq($from: large) {
+          @include font-size(36px, 60px);
+        }
+      }
+
+      .l-highlight__more {
+
+        &:not(:first-child) {
+
+          @include mq($until: large) {
+            @include rem(margin-top, 40px);
+          }
+
+          @include mq($from: large) {
+            @include rem(margin-top, 60px);
+          }
+        }
+      }
+
+        .l-highlight__button {}

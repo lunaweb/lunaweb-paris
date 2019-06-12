@@ -1,0 +1,224 @@
+/**
+ * COMPONENT
+ * Name: Offer
+ ********************************* */
+
+.c-offer {
+  position: relative;
+}
+
+
+  /**
+   * LINK
+   *********************** */
+  .c-offer__link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+      transform: translate3d(0, -4px, 0);
+    }
+
+    @include mq($until: large) {
+      color: $color-foreground;
+    }
+
+    @include mq($from: large) {
+      color: $color-background;
+    }
+  }
+
+  a.c-offer__link {
+    cursor: pointer;
+  }
+
+
+    /**
+     * CONTAINER
+     *********************** */
+    .c-offer__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      @include mq($until: small) {
+
+      }
+
+      @include mq($from: small, $until: medium) {
+
+      }
+
+      @include mq($from: medium, $until: large) {
+
+      }
+
+      @include mq($from: large, $until: xlarge) {
+        @include rem(min-height, 300px);
+        @include rem(padding, 20px);
+
+        .c-offer--large & {
+          @include rem(min-height, 420px);
+        }
+      }
+
+      @include mq($from: xlarge) {
+        @include rem(min-height, 300px);
+        @include rem(padding, 40px);
+
+        .c-offer--large & {
+          @include rem(min-height, 560px);
+        }
+      }
+    }
+
+
+      /**
+       * CONTENT
+       *********************** */
+      .c-offer__content {
+        position: relative;
+        z-index: 2;
+      }
+
+
+        /**
+         * TITLE
+         *********************** */
+        .c-offer__title {
+          position: relative;
+          display: inline-block;
+          font-family: $font-secondary;
+          transition: color 400ms ease;
+
+          &:before {
+            content: "— ";
+            display: inline;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $color-background;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+            z-index: -1;
+          }
+
+          @include mq($until: small) {
+            @include font-size(20px, 26px);
+          }
+
+          @include mq($from: small, $until: medium) {
+            @include font-size(22px, 28px);
+          }
+
+          @include mq($until: medium) {
+            color: $color-blue;
+
+            &:after {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+
+          @include mq($from: medium) {
+
+            .c-offer__link:hover & {
+              color: $color-blue;
+
+              &:after {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include font-size(26px, 32px);
+          }
+
+          @include mq($from: large) {
+            @include font-size(32px, 40px);
+
+            .c-offer--large & {
+              @include font-size(42px, 54px);
+            }
+          }
+        }
+
+
+        /**
+         * DESCRIPTION
+         *********************** */
+        .c-offer__description {
+          @include font-size(14px, 24px);
+          overflow: hidden;
+
+          @include mq($until: large) {
+            @include rem(margin-top, 10px);
+          }
+
+          @include mq($from: large) {
+            @include rem(margin-top, 20px);
+          }
+        }
+
+
+      /**
+       * ILLUSTRATION
+       *********************** */
+      .c-offer__illustration {
+
+        @include mq($until: large) {
+          display: none;
+        }
+
+        @include mq($from: large) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          pointer-events: none;
+          overflow: hidden;
+          z-index: 1;
+
+          &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $color-foreground;
+            mix-blend-mode: hard-light;
+            transition: background-color 0.4s ease, opacity 0.4s ease;
+            backface-visibility: hidden;
+            opacity: 0.5;
+            z-index: 1;
+
+            .c-offer__link:hover & {
+              background-color: $color-primary;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+        .c-offer__picture {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(1);
+        }

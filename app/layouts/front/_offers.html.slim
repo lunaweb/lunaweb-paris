@@ -1,0 +1,42 @@
+.l-offers(id="offers")
+  .l-offers__container
+    .l-container.l-container--large
+
+      .l-offers__head
+        h2.l-offers__title.c-title= dato.service.title
+        .l-offers__description= dato.service.description
+
+      .l-offers__content
+
+        .l-offers__column
+          .l-offers__items
+
+            - dato.service.offers_left.each do |offer|
+              .l-offers__item
+                = ui_component('offer',
+                  large: offer.highlighted,
+                  title: offer.title,
+                  description: offer.description,
+                  picture: { \
+                    src: offer.picture.url,
+                    alt: offer.picture.alt ? offer.picture.alt : offer.picture.title,
+                  },
+                )
+
+        .l-offers__column
+          .l-offers__items
+
+            - dato.service.offers_right.each do |offer|
+              .l-offers__item
+                = ui_component('offer',
+                  large: offer.highlighted,
+                  title: offer.title,
+                  description: offer.description,
+                  picture: { \
+                    src: offer.picture.url,
+                    alt: offer.picture.alt ? offer.picture.alt : offer.picture.title,
+                  },
+                )
+
+      / .l-offers__foot
+      /   = link_to "Nos méthodes en images 📸", "https://www.instagram.com/lunaweb/", :target => "_blank", :class => "l-offers__button c-button"

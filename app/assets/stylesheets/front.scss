@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// SHARED IMPORTS
+@import "shared";
+
+// // COMPONENTS
+// // Reutilisable components
+// // Prefix: c
+@import "front/components/button";
+@import "front/components/content";
+@import "front/components/introduction";
+@import "front/components/next";
+@import "front/components/offer";
+@import "front/components/reference";
+@import "front/components/title";
+
+// LAYOUT
+// Layout elements
+// Prefix: l
+@import "front/layout/base";
+@import "front/layout/contact";
+@import "front/layout/container";
+@import "front/layout/footer";
+@import "front/layout/header";
+@import "front/layout/highlight";
+@import "front/layout/offers";
+@import "front/layout/overlay";
+@import "front/layout/references";
+
+// UTILITIES
+// Utility classes
+// Prefix: u
+@import "front/utilities/colors";
+@import "front/utilities/hidden";
+@import "front/utilities/keyframes";
+@import "front/utilities/text";
+
+// A11y
+// Accessibility tool
+// @import "a11y.css/sass/a11y-fr";

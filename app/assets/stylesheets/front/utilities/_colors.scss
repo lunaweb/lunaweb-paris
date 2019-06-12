@@ -1,0 +1,13 @@
+$properties: (
+  background: background-color,
+  border: border-color,
+  color: color
+);
+
+@each $theme, $color in $colors {
+  @each $name, $property in $properties {
+    .u-#{$name}-#{$theme} {
+      #{$property}: $color !important;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+/**
+ * LAYOUT
+ * Name: Header
+ ********************************* */
+
+.l-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: background-color 0.4s ease;
+  pointer-events: none;
+  z-index: 9;
+
+  body.is-not-at-top & {
+    background-color: $color-background;
+    pointer-events: all;
+  }
+
+  @include mq($from: small) {
+    @include rem(padding-top, 20px);
+  }
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-header__container {
+    @include rem(padding-top, 20px);
+    @include rem(padding-bottom, 20px);
+
+    @include mq($until: small) {
+      @include rem(padding-right, 40px);
+      @include rem(padding-left, 40px);
+    }
+
+    @include mq($from: small) {
+      @include rem(padding-left, 60px);
+    }
+
+    @include mq($from: small, $until: large) {
+      @include rem(padding-right, 60px);
+    }
+
+    @include mq($from: large, $until: xlarge) {
+      @include rem(padding-right, 120px);
+    }
+
+    @include mq($from: xlarge) {
+      @include rem(padding-right, 180px);
+    }
+  }
+
+
+    /**
+     * SUP
+     *********************** */
+    .l-header__sup {
+      display: none;
+      @include rem(padding, 10px);
+      color: $color-background;
+      background-color: $color-primary;
+    }
+
+
+    /**
+     * MAIN
+     *********************** */
+    .l-header__main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      @include mq($until: medium) {
+        justify-content: center;
+      }
+    }
+
+
+      /**
+       * HOME
+       *********************** */
+      .l-header__home {
+        flex: 0 0 auto;
+        color: $color-foreground;
+        transition: color 0.3s ease;
+        pointer-events: all;
+
+        &:hover {
+          text-decoration: none;
+          color: $color-primary;
+        }
+
+        body.is-overlayed & {
+          color: $color-primary;
+        }
+      }
+
+        .l-header__icon {}
+
+
+      /**
+       * ITEMS
+       *********************** */
+      .l-header__items {
+
+        @include mq($until: medium) {
+          display: none;
+        }
+
+        @include mq($from: medium) {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+
+        .l-header__item {
+
+          &:not(:first-child) {
+            @include rem(margin-left, 40px);
+          }
+        }
+
+          .l-header__link {
+            position: relative;
+            display: block;
+            @include font-size(11px, 25px);
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            @include rem(letter-spacing, 1px);
+            color: $color-foreground;
+            pointer-events: all;
+
+            &:after {
+              content: '';
+              position: absolute;
+              @include rem(height, 2px);
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-color: $color-primary;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.3s ease;
+            }
+
+            &:hover {
+              text-decoration: none;
+
+              &:after {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+          }
+
+

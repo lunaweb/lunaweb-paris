@@ -1,0 +1,26 @@
+.c-reference.js-reference(data-target=id)
+
+  - if url
+    / = link_to link[:href], :class => "c-reference__link js-reference-link" do
+    = link_to url, :target => "_blank", :class => "c-reference__link" do
+      .c-reference__container
+        .c-reference__background
+          = image_tag picture[:src], :alt => picture[:alt], :class => "c-reference__picture"
+          .c-reference__label= "Voir cette réalisation ›"
+        .c-reference__content
+          .c-reference__heading
+            h2.c-reference__title= title
+            .c-reference__backface= title
+          p.c-reference__description= description
+
+  - else
+    .c-reference__link
+      .c-reference__container
+        .c-reference__background
+          = image_tag picture[:src], :alt => picture[:alt], :class => "c-reference__picture"
+          .c-reference__label= "(Réalisation confidentielle)"
+        .c-reference__content
+          .c-reference__heading
+            h2.c-reference__title= title
+            .c-reference__backface= title
+          p.c-reference__description= description

@@ -1,0 +1,50 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: background-color 0.6s ease;
+
+  &.is-loaded {
+    overflow-y: auto;
+  }
+
+  &.is-overlayed {
+    background-color: $color-foreground;
+    transition: none;
+    overflow-y: hidden;
+  }
+}
+
+.l-load {
+  display: none;
+
+  .js & {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-primary;
+    z-index: 9999999;
+  }
+
+  .js body.is-loaded & {
+    display: none;
+  }
+}
+
+.l-main {
+  position: relative;
+  transition: background-color 0.6s ease, transform 0.6s ease, opacity 0.6s ease;
+
+  body.is-overlayed & {
+    background-color: $color-background;
+    transform: translate3d(720px, 0, 0);
+    opacity: 0.5;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+
+    > * {
+      pointer-events: none;
+    }
+  }
+}

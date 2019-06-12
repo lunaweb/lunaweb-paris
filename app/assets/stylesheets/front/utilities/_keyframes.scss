@@ -1,0 +1,95 @@
+/**
+ * KEYFRAMES
+ *********************** */
+
+
+// blinkit
+@keyframes blinkit1 {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  12.51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@for $i from 2 through 7 {
+  $percent: $i*12.5;
+
+  @keyframes blinkit#{$i} {
+    0% {
+      opacity: 0;
+    }
+    #{$percent - 12.51}% {
+      opacity: 0;
+    }
+    #{$percent - 12.5}% {
+      opacity: 1;
+    }
+    #{$percent}% {
+      opacity: 1;
+    }
+    #{$percent + 0.01}% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes blinkit8 {
+  0% {
+    opacity: 0;
+  }
+  87.49% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// dropdown
+@keyframes dropdown {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+
+// hideBackface
+@keyframes hideBackface {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+// slideUp
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

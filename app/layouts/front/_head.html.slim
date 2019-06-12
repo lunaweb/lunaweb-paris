@@ -1,0 +1,41 @@
+meta(charset="utf-8")
+
+title= "LunaWeb / Agence UX Design à Paris"
+
+meta(name="description" content="Depuis 2004, nous concevons le web selon les principes de la conception centrée utilisateur : design de services, audit UX, prototypage et tests UX à Paris.")
+
+- if (keywords = meta_keywords) && !keywords.empty?
+  meta(name="keywords" content=keywords)
+
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+link(rel="manifest" href="/site.webmanifest")
+link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000")
+link(rel="icon" type="image/x-icon" href="/favicon.ico")
+meta(name="msapplication-TileColor" content="#2e55ff")
+meta(name="theme-color" content="#2e55ff")
+
+meta(property="og:title" content="LunaWeb / Agence UX Design à Paris")
+meta(property="og:description" content="Depuis 2004, nous concevons le web selon les principes de la conception centrée utilisateur : design de services, audit UX, prototypage et tests UX à Paris.")
+meta(property="og:type" content="website")
+meta(property="og:url" content="http://lunaweb.paris/")
+meta(property="og:image" content="facebook-share.png")
+meta(property="og:image:width" content="1200")
+meta(property="og:image:height" content="630")
+
+/[if IE]
+  meta(content="IE=edge" http-equiv="X-UA-Compatible")
+  meta(content="no" http-equiv="imagetoolbar")
+  meta(content="true" name="MSSmartTagsPreventParsing")
+
+= stylesheet_link_tag :front, :media => :screen
+= stylesheet_link_tag :print, :media => :print
+= content_for :page_styles
+
+= javascript_include_tag "front/head"
+
+- if build?
+  = render :partial => "layouts/front/analytics"

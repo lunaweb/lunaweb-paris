@@ -1,0 +1,164 @@
+/**
+ * LAYOUT
+ * Name: Offers
+ ********************************* */
+
+.l-offers {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-offers__container {
+    background-color: $color-grey;
+
+    @include mq($until: medium) {
+      @include rem(padding, 40px 0);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(padding, 60px 0);
+    }
+
+    @include mq($from: large, $until: xlarge) {
+      @include rem(margin-right, 60px);
+      @include rem(padding, 60px 20px);
+    }
+
+    @include mq($from: xlarge) {
+      @include rem(margin-right, 120px);
+      @include rem(padding, 120px 60px);
+    }
+  }
+
+
+    /**
+     * HEAD
+     *********************** */
+    .l-offers__head {
+    }
+
+      .l-offers__title {
+        text-align: center;
+      }
+
+      .l-offers__description {
+
+        &:not(:first-child) {
+          @include rem(margin-top, 30px);
+        }
+
+        @include mq($until: small) {
+          @include font-size(14px, 24px);
+        }
+
+        @include mq($from: large) {
+          @include rem(max-width, 680px);
+          margin-right: auto;
+          margin-left: auto;
+          text-align: center;
+        }
+      }
+
+
+    /**
+     * CONTENT
+     *********************** */
+    .l-offers__content {
+
+      @include mq($until: medium) {
+        @include rem(margin-top, 60px);
+      }
+
+      @include mq($from: medium) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        @include rem(margin-top, 90px);
+      }
+
+      @include mq($from: medium, $until: xlarge) {
+        @include rem(margin-right, -15px);
+        @include rem(margin-left, -15px);
+      }
+
+      @include mq($from: xlarge) {
+        @include rem(margin-right, -30px);
+        @include rem(margin-left, -30px);
+      }
+    }
+
+      .l-offers__column {
+
+        @include mq($from: medium) {
+          width: 50%;
+        }
+
+        @include mq($from: medium, $until: xlarge) {
+          @include rem(padding-right, 15px);
+          @include rem(padding-left, 15px);
+        }
+
+        @include mq($from: large) {
+
+          &:first-child {
+            @include rem(margin-top, 120px);
+          }
+        }
+
+        @include mq($from: xlarge) {
+          @include rem(padding-right, 30px);
+          @include rem(padding-left, 30px);
+        }
+      }
+
+        .l-offers__items {}
+
+          .l-offers__item {
+            position: relative;
+
+            @include mq($until: xlarge) {
+
+              &:not(:first-child) {
+                @include rem(margin-top, 30px);
+              }
+            }
+
+            @include mq($from: xlarge) {
+
+              &:not(:first-child) {
+                @include rem(margin-top, 60px);
+              }
+            }
+          }
+
+
+    /**
+     * FOOT
+     *********************** */
+    .l-offers__foot {
+      text-align: center;
+
+      &:not(:first-child) {
+
+        @include mq($until: medium) {
+          @include rem(margin-top, 40px);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include rem(margin-top, 60px);
+        }
+
+        @include mq($from: large, $until: xlarge) {
+          @include rem(margin-top, 80px);
+        }
+
+        @include mq($from: xlarge) {
+          @include rem(margin-top, 120px);
+        }
+      }
+    }

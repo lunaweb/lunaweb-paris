@@ -1,0 +1,34 @@
+.l-contact(id="contact")
+  .l-contact__container
+    .l-container.l-container--large
+
+      .l-contact__head
+        h2.l-contact__title.c-title= dato.contact.title
+        .l-contact__description= dato.contact.description
+
+      .l-contact__content
+        .l-contact__frame
+          .c-locator.js-locator(data-list="locator-list" data-map="locator-map")
+            div(id="locator-list")
+              div.js-locator-item(itemscope="" itemtype="https://schema.org/LocalBusiness" data-latitude="48.8434649" data-longitude="2.3148515999999972")
+                meta(itemprop="name" content="Hangar à Paname")
+                meta(itemprop="image" content="http://lunaweb-site-2017.preprod-06.lunaprod.com/app/uploads/2018/10/hangar-paname.jpg")
+                span(itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress")
+                  meta(itemprop="streetAddress" content="165 bis rue de Vaugirard, 75015 Paris")
+                  meta(itemprop="postalCode" content="75015")
+                  meta(itemprop="addressLocality" content="Paris")
+            .c-locator__map(id="locator-map")
+
+        .l-contact__line
+          .l-contact__highlight
+            = dato.contact.email_prefix
+            = " "
+            = link_to "paris@lunaweb.fr", "mailto:paris@lunaweb.fr", :class => "l-contact__link"
+          .l-contact__legend= dato.contact.email_suffix
+
+        .l-contact__line
+          .l-contact__highlight
+            = dato.contact.phone_prefix
+            = " "
+            = link_to "02 53 35 50 60", "tel:0253355060", :class => "l-contact__link"
+          .l-contact__legend= dato.contact.phone_suffix

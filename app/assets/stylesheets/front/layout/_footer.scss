@@ -1,0 +1,72 @@
+/**
+ * LAYOUT
+ * Name: Footer
+ ********************************* */
+
+.l-footer {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-footer__container {
+    @include rem(padding-top, 60px);
+    @include rem(padding-bottom, 60px);
+    color: $color-background;
+    background-color: $color-foreground;
+  }
+
+
+    /**
+     * ITEMS
+     *********************** */
+    .l-footer__items {
+
+      @include mq($from: medium) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        @include rem(margin-right, -15px);
+        @include rem(margin-left, -15px);
+      }
+    }
+
+
+      /**
+       * ITEM
+       *********************** */
+      .l-footer__item {
+        @include rem(padding-right, 15px);
+        @include rem(padding-left, 15px);
+        @include font-size(11px, 15px);
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        @include rem(letter-spacing, 1px);
+
+        @include mq($until: medium) {
+          text-align: center;
+
+          &:not(:first-child) {
+            @include rem(margin-top, 20px);
+          }
+        }
+      }
+
+      .l-footer__item--legals {
+        flex: 1 0 auto;
+      }
+
+
+        /**
+         * LINK
+         *********************** */
+        .l-footer__link {
+          color: $color-background;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }

@@ -1,0 +1,22 @@
+.l-header__container
+
+  .l-header__sup
+    .c-event
+      .c-event__content
+        .c-event__title Lorem Ipsum
+        .c-event__description Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam.
+        .c-event__more
+          = link_to "En savoir plus", "#", :target => "_link", :class => "c-event__link"
+
+  .l-header__main
+    = link_to "/", :class => "l-header__home" do
+      = svg_sprite "lunaweb", :width => 52, :height => 52, :class => "l-header__icon"
+    ul.l-header__items
+      li.l-header__item
+        = link_to "Prestations", "#offers", :target => "_link", :class => "l-header__link js-scrollto"
+      li.l-header__item
+        = link_to "UX Lab", "#uxlab", :target => "_link", :class => "l-header__link js-scrollto"
+      li.l-header__item
+        = link_to "Références", "#references", :target => "_link", :class => "l-header__link js-scrollto"
+      li.l-header__item
+        = link_to "Contact", "#contact", :target => "_link", :class => "l-header__link js-scrollto"

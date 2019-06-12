@@ -1,0 +1,28 @@
+/**
+ * LAYOUT
+ * Name: Container
+ ********************************* */
+
+.l-container {
+  @include rem(max-width, $container-width);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq($until: small) {
+    @include rem(padding-right, $gutter-size/2);
+    @include rem(padding-left, $gutter-size/2);
+  }
+
+  @include mq($from: small) {
+    @include rem(padding-right, $gutter-size);
+    @include rem(padding-left, $gutter-size);
+  }
+}
+
+.l-container--small {
+  @include rem(max-width, $container-small);
+}
+
+.l-container--large {
+  @include rem(max-width, $container-large);
+}

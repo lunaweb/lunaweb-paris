@@ -1,0 +1,8 @@
+<div class="colors hgt-columns">
+  <% examples.each do |example| %>
+    <div class="hgt-column one-fifth color js-color">
+      <div class="color__block js-background u-background-<%= example.rendered_example %>"></div>
+      <div class="color__label"><code class="styleguide"><%= example.rendered_example %></code></div>
+    </div>
+  <% end %>
+</div>
